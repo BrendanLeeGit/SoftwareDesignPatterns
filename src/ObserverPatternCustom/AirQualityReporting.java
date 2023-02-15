@@ -1,16 +1,17 @@
-package ObserverPattern;
-import java.sql.Array;
+package ObserverPatternCustom;
 import java.util.ArrayList;
-import java.util.Random;
+
 //idea is to have different air quality every day
 //ppl wanna jog as much as possible, and rely on air quality reporting
 //to know if they can jog or not
 public class AirQualityReporting implements Subject {
     private ArrayList observers;
     private boolean safe;
+    private boolean previousSafe;
 
     public AirQualityReporting() {
         observers = new ArrayList<Observer>();
+        previousSafe = true;
     }
 
     public void registerObserver(Observer o) {
@@ -31,16 +32,13 @@ public class AirQualityReporting implements Subject {
         }
     }
 
-    public void beginRandomAirQuality(){
-        Random r = new Random();
-        for (int i = 0; i < 10000; i++){
-            if (r.nextInt(100) == 69){
-                safe = false;
-            }
-            else {safe = true;}
+
+    public void setSafe(boolean safe){
+        this.safe = safe;
+        if (safe != previousSafe){
             notifyObservers();
         }
+        previousSafe = safe;
     }
-
 
 }
