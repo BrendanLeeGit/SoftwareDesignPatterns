@@ -8,7 +8,6 @@ public class Policeman extends Person{
     public void arrestCriminal(){
         System.out.println("Arresting criminal!");
     }
-
     public String getName(){
         return name;
     }
