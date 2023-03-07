@@ -9,5 +9,7 @@ public class Notes {
     have text box that displays stuff, buttons with clear,
     button with plot and export
     controls in its own world, data in its own world, and display in its own world
+
+
      */
 }
