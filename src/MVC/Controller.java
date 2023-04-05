@@ -11,7 +11,6 @@ public class Controller implements ControllerInterface {
     @Override
     public void plot(String x1, String x2, String increment, String m, String b) {
         model.buildOutputArrayList(Double.parseDouble(x1), Double.parseDouble(x2), Double.parseDouble(increment), Double.parseDouble(m), Double.parseDouble(b));
-
     }
 
     @Override

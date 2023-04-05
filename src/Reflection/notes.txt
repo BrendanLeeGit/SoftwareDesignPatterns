@@ -1,0 +1,29 @@
+gets a copy of the object in the most abstract form
+gets values and structure and whatnot
+
+lets u find info on shit at runtime like global variables ,if they're priv, what's inside each variable,
+methods and whatnot
+
+lets you reflect shit and change programs
+
+can look at objects and methods with more power and shit
+
+can construct classes from scratch with reflection
+
+can make java classes without java
+
+program that programs into existence what compiled java wants to do
+
+can manufacture classes without java
+
+spring framework uses xml files as base construct of classes, uses reflection properly
+
+due next thurs today 3/28
+
+write program that can determine the global variables, methods, constructors of a class,
+gimme name sof variables, what's inside the variables at that time
+
+write a program that levies spring framework
+get api get whatever, make it do anything
+
+one page report
