@@ -1,4 +1,4 @@
-package TemplateDesignPattern;
+package templateDesignPattern;
 
 public class ProgramTester {
     public static void main(String[] args){

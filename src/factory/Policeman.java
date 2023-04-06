@@ -1,4 +1,4 @@
-package Factory;
+package factory;
 
 public class Policeman extends Person{
     private String name;

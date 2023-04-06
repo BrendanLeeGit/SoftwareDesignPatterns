@@ -1,4 +1,4 @@
-package Factory;
+package factory;
 
 public class PeopleFactory {
     //this design pattern allows any changes to the types of ppl we need to make to stay in this class

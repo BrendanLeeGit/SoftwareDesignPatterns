@@ -1,4 +1,4 @@
-package Reflection;
+package reflection;
 
 public class ExampleClass {
     private boolean weird;
@@ -24,5 +24,9 @@ public class ExampleClass {
 
     private void switchBool(){
         weird = !weird;
+    }
+
+    protected int hoolah(String poop){
+        return 96;
     }
 }

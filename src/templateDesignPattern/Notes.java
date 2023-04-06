@@ -1,4 +1,4 @@
-package TemplateDesignPattern;
+package templateDesignPattern;
 
 public class Notes {
     /*

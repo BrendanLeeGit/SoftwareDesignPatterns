@@ -1,4 +1,4 @@
-package Factory;
+package factory;
 
 public class JobCenter {
     //leave a local reference for the object

@@ -1,4 +1,4 @@
-package Reflection;
+package reflection;
 
 public class Main {
     public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException {

@@ -1,4 +1,4 @@
-package ObserverPatternCustom;
+package observerPatternCustom;
 
 import java.util.Random;
 public class JoggingCenter {

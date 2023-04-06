@@ -1,4 +1,4 @@
-package ObserverPatternCustom;
+package observerPatternCustom;
 import java.util.ArrayList;
 
 //idea is to have different air quality every day

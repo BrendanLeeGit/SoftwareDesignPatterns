@@ -1,4 +1,4 @@
-package Factory;
+package factory;
 
 public class FireFighter extends Person{
     private String name;

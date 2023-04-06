@@ -1,4 +1,4 @@
-package ObserverPatternCustom;
+package observerPatternCustom;
 /**
  * Jogger can jog 10 miles a day.
  * They want to maximize miles jogged bc they're an exercise junkie.
