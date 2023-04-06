@@ -5,7 +5,7 @@ public class DnDAverage {
         int lowestIndex = 0;
         Random r = new Random();
         double average = 0;
-        int numRuns = 10000;
+        int numRuns = 100000;
 
         for (int i = 0; i < numRuns; i++){
             for (int j = 0; j < 4; j++){
