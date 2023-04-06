@@ -5,19 +5,15 @@ public class Reflection {
     private Class c;
     private Object object;
 
-    /**
-     * Constructor for when fields aren't important. An instance of the object isn't required.
-     *
-     * @param className Name of the class you want analyzed
-     * @throws ClassNotFoundException You likely spelled the name wrong or didn't include the package
-     */
-    public Reflection(String className) throws ClassNotFoundException {
-        c = Class.forName(className);
+    public Reflection() throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
+        Constructor<ExampleClass> con = ExampleClass.class.getConstructor(boolean.class);
+        object = con.newInstance(true);
+        c = object.getClass();
     }
 
-    public Reflection(String className, Object objectName) throws ClassNotFoundException {
-        c = Class.forName(className);
-        object = objectName;
+    public Reflection(Object object){
+        this.object = object;
+        c = object.getClass();
     }
 
     public void setClass(String className) throws ClassNotFoundException {
@@ -50,7 +46,7 @@ public class Reflection {
                     System.out.println("    " + param.getName());
                 }
             }
-            System.out.println();
+            System.out.println("Return type: " + method.getReturnType() + "\n");
         }
     }
 
@@ -69,10 +65,9 @@ public class Reflection {
             else{
                 System.out.println("Parameters: ");
                 for (Class param : params) {
-                    System.out.println("    " + param.getName());
+                    System.out.println("    " + param.getName() + "\n");
                 }
             }
-            System.out.println();
         }
     }
 
@@ -82,9 +77,17 @@ public class Reflection {
         for (Field field : fields) {
             field.setAccessible(true);
             System.out.println("Name: " + field.getName());
-            System.out.println("Modifiers: " + field.getModifiers());
+            System.out.println("Type: " + field.getType());
+            System.out.println("Modifiers: " + Modifier.toString(field.getModifiers()));
             System.out.println("Value: " + field.get(object) + "\n");
         }
+    }
+
+    public void changeFields(String fieldName, Object fieldValue) throws NoSuchFieldException, IllegalAccessException {
+        Field f = c.getField(fieldName);
+        f.setAccessible(true);
+        f.set(object, fieldValue);
+        f.setAccessible(false);
     }
 
     public void examineClass(){

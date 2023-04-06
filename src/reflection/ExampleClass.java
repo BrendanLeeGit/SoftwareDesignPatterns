@@ -4,18 +4,20 @@ public class ExampleClass {
     private boolean weird;
     private int randomInt;
     public double pubDub;
-    public String name;
+    public final String name;
 
     public ExampleClass(){
         weird = false;
         randomInt = 3;
         pubDub = 1.2;
+        name = "woop";
     }
 
     public ExampleClass(boolean weird){
         this.weird = weird;
         randomInt = 3;
         pubDub = 2.5;
+        name = "woop";
     }
 
     public void doubleDouble(){
