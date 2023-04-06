@@ -46,8 +46,8 @@ public class Reflection {
             }
             else{
                 System.out.println("Parameters: ");
-                for (int i = 0; i < params.length; i++){
-                    System.out.println("    " + params[i].getName());
+                for (Class param : params) {
+                    System.out.println("    " + param.getName());
                 }
             }
             System.out.println();
@@ -68,8 +68,8 @@ public class Reflection {
             }
             else{
                 System.out.println("Parameters: ");
-                for (int i = 0; i < params.length; i++){
-                    System.out.println("    " + params[i].getName());
+                for (Class param : params) {
+                    System.out.println("    " + param.getName());
                 }
             }
             System.out.println();
