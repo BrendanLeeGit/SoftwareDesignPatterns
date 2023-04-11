@@ -8,5 +8,8 @@ public class ReflectionTest {
         r.fullTest();
         r.changeFields("name", "Poop");
         r.fullTest();
+
+        Reflection string = new Reflection("f");
+        string.fullTest();
     }
 }

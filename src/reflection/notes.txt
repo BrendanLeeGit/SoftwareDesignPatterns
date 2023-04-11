@@ -27,3 +27,5 @@ write a program that levies spring framework
 get api get whatever, make it do anything
 
 one page report
+
+make reflection more safe and find ways to not get warnings

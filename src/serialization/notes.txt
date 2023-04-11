@@ -1,0 +1,12 @@
+serialize  class to send it to places
+like save on flashdrive, write as a file, print it out,
+
+write a random object, learnn about serialization
+probably gonna need output or input stream reader/writer
+
+serialize the object, then go load it up with a reader somewhere else
+
+do the stupid thing, write it out, save on flashdrive,
+load on something else
+
+1 page pros and cons what does it do and what is it

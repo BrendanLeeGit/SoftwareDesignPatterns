@@ -50,6 +50,33 @@ public class Reflection {
         }
     }
 
+    /**
+     * Intended to be able to automatically run every method in an object that doesn't require any parameters
+     *
+     * @throws InvocationTargetException No
+     * @throws IllegalAccessException Clue
+     */
+    public void runMethodsWithNoParameters() throws InvocationTargetException, IllegalAccessException {
+        System.out.println("<--Running the Methods With No Parameters-->");
+        Method[] m = c.getDeclaredMethods();
+        Class[] params;
+        String methodName;
+        for (Method method : m) {
+            methodName =  method.getName();
+            params = method.getParameterTypes();
+            //in case there's no parameters at all, indicate it
+            if (params.length == 0){
+                method.invoke(object);
+            }
+            else{
+                System.out.println(methodName + " has the following parameters: ");
+                for (Class param : params) {
+                    System.out.println("    " + param.getName());
+                }
+            }
+        }
+    }
+
     public void examineConstructors(){
         System.out.println("<--Examining Constructors-->");
         Constructor[] constructors = c.getConstructors();
