@@ -1,0 +1,30 @@
+Use genetic algorithm to figure out the best placement of numbers in order to get the most money
+Perhaps simulate a lemonade stand
+
+give everyone $200
+4 parameters
+$ spent on quantity of product
+    1-1
+$ spent on quality of product
+    every $1 spent means price can increase by $0.10
+$ spent on advertisement for product
+    every $1 spent increases possible buyers by 2
+price of product
+    if price is higher than quality's price, then only a percentage of customers will be willing to buy
+    percentage willing to buy is calculated as (quality's price/actual price)
+
+
+class LemonadeStand
+holds fields for parameters, constructor has the double[] arraylist of parameters
+probs holds the calculations as well
+
+get and set methods when parameters need to be changed
+
+Actual genetic change algorithm:
+takes the arraylist of parameters of the top performing children and generates 10 new ones of each
+changes a random parameter by a random amount from $1-10
+
+in the end ofc calculates total profit after a cycle the best ones move on
+
+serialize the top few of each generation
+

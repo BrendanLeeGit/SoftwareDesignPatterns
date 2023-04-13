@@ -4,7 +4,6 @@ import java.io.Serializable;
 
 public class Virus implements Serializable {
     private String name;
-    private String filePath;
 
     public Virus(String name){
         this.name = name;

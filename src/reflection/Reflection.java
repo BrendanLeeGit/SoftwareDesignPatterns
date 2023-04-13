@@ -2,7 +2,7 @@ package reflection;
 import java.lang.reflect.*;
 
 public class Reflection {
-    private Class c;
+    private Class<?> c;
     private Object object;
 
     public Reflection() throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
@@ -30,7 +30,7 @@ public class Reflection {
     public void examineMethods(){
         System.out.println("<--Examining Methods-->");
         Method[] m = c.getDeclaredMethods();
-        Class[] params;
+        Class<?>[] params;
         for (Method method : m) {
             System.out.println("Name: " + method.getName());
             System.out.println("Modifier: " + Modifier.toString(method.getModifiers()));
@@ -42,7 +42,7 @@ public class Reflection {
             }
             else{
                 System.out.println("Parameters: ");
-                for (Class param : params) {
+                for (Class<?> param : params) {
                     System.out.println("    " + param.getName());
                 }
             }
@@ -59,7 +59,7 @@ public class Reflection {
     public void runMethodsWithNoParameters() throws InvocationTargetException, IllegalAccessException {
         System.out.println("<--Running the Methods With No Parameters-->");
         Method[] m = c.getDeclaredMethods();
-        Class[] params;
+        Class<?>[] params;
         String methodName;
         for (Method method : m) {
             methodName =  method.getName();
@@ -70,7 +70,7 @@ public class Reflection {
             }
             else{
                 System.out.println(methodName + " has the following parameters: ");
-                for (Class param : params) {
+                for (Class<?> param : params) {
                     System.out.println("    " + param.getName());
                 }
             }
@@ -79,9 +79,9 @@ public class Reflection {
 
     public void examineConstructors(){
         System.out.println("<--Examining Constructors-->");
-        Constructor[] constructors = c.getConstructors();
-        Class[] params;
-        for (Constructor constructor : constructors) {
+        Constructor<?>[] constructors = c.getConstructors();
+        Class<?>[] params;
+        for (Constructor<?> constructor : constructors) {
             System.out.println("Name: " + constructor.getName());
             System.out.println("Modifiers: " + Modifier.toString(constructor.getModifiers()));
             params = constructor.getParameterTypes();
@@ -91,7 +91,7 @@ public class Reflection {
             }
             else{
                 System.out.println("Parameters: ");
-                for (Class param : params) {
+                for (Class<?> param : params) {
                     System.out.println("    " + param.getName() + "\n");
                 }
             }
