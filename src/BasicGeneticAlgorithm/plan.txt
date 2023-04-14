@@ -4,7 +4,7 @@ Perhaps simulate a lemonade stand
 give everyone $200
 4 parameters
 $ spent on quantity of product
-    1-1
+    1-2
 $ spent on quality of product
     every $1 spent means price can increase by $0.10
 $ spent on advertisement for product
@@ -27,4 +27,7 @@ changes a random parameter by a random amount from $1-10
 in the end ofc calculates total profit after a cycle the best ones move on
 
 serialize the top few of each generation
+
+
+LemonadeCompany
 
